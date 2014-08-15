@@ -55,10 +55,24 @@ node default {
   # core modules, needed for most things
   include git
   git::config::global {
-      'user.name':     value => 'pagrawl3';
-      'user.email':    value => 'mail@prath.am';
-      'core.editor':   value => 'subl';
-      'color.ui':      value => 'true';
+    'user.name':
+      value => 'Pratham Agrawal';
+    'user.email':
+      value => 'mail@prath.am';
+    'github.user':
+      value => 'pagrawl3';
+    'color.ui':
+      value => 'true';
+    'core.quotepath':
+      value => 'false';
+    'diff.tool':
+      value => 'opendiff';
+    'merge.tool':
+      value => 'opendiff';
+    'push.default':
+      value => 'simple';
+    'alias.amend':
+      value => 'commit --amend -C HEAD';
   }
 
   include hub
@@ -81,21 +95,22 @@ node default {
   include mplayerx
   include cinch
   include imageoptim
+  include totalterminal
 
   include sublime_text::v2
   sublime_text::v2::package { 'Emmet':
     source => 'sergeche/emmet-sublime'
   }
-  sublime_text_2::v2::package { 'Jade':
-      source => 'miksago/jade-tmbundle'
+  sublime_text::v2::package { 'Jade':
+    source => 'davidrios/jade-tmbundle'
   }
-  sublime_text_2::v2::package { 'SublimeAllAutocomplete':
+  sublime_text::v2::package { 'SublimeAllAutocomplete':
     source => 'alienhard/SublimeAllAutocomplete'
   }
-  sublime_text_2::v2::package { 'LESS':
+  sublime_text::v2::package { 'LESS':
     source => 'danro/Less-sublime'
   }
-  sublime_text_2::v2::package { 'Color Scheme - Solarized':
+  sublime_text::v2::package { 'Color Scheme - Solarized':
     source => 'altercation/solarized'
   }
   file { "${boxen::config::homedir}/bin/subl":
@@ -105,11 +120,12 @@ node default {
 
   include chrome
   include wget
-  include prezto
+  include zsh
+  include ohmyzsh
 
   repository {
       "dotfiles":
-        source   => 'dliggat/dotfiles',
+        source   => 'pagrawl3/dotfiles',
         path     => "${::boxen_srcdir}/dotfiles";
   }
 
@@ -149,6 +165,35 @@ node default {
     target  => "${::boxen_srcdir}/dotfiles/pref.sublime-settings",
     require => Repository["dotfiles"],
   }
+
+  file { "/Users/${::boxen_user}/Library/Preferences/com.apple.dock.plist":
+    ensure  => link,
+    target  => "${::boxen_srcdir}/dotfiles/dock.plist",
+    require => Repository["dotfiles"],
+  }
+
+  repository { 'package-control':
+    source => 'wbond/sublime_package_control',
+    path   => "${base}/Sublime Text 2/Packages/Package Control"
+  }
+
+  boxen::osx_defaults {
+    "Set aqua color variant to graphite":
+      ensure => present,
+      key    => 'AppleAquaColorVariant',
+      domain => 'NSGlobalDomain',
+      user   => $::boxen_user,
+      type   => 'int',
+      value  => 6;
+    "disables Dashboard":
+      user   => $::boxen_user,
+      domain => 'com.apple.dashboard',
+      key    => 'mcx-disabled',
+      value  => true;
+  }
+  include osx::global::enable_keyboard_control_access
+  include osx::no_network_dsstores
+  include osx::dock::autohide
 
   # common, useful packages
   package {

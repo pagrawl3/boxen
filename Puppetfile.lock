@@ -1,12 +1,32 @@
 GITHUBTARBALL
+  remote: boxen/puppet-bartender
+  specs:
+    bartender (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
     boxen (3.6.2)
 
 GITHUBTARBALL
-  remote: boxen/puppet-dnsmasq
+  remote: boxen/puppet-chrome
   specs:
-    dnsmasq (1.0.1)
+    chrome (1.1.1)
+
+GITHUBTARBALL
+  remote: boxen/puppet-cinch
+  specs:
+    cinch (1.0.1)
+
+GITHUBTARBALL
+  remote: boxen/puppet-dropbox
+  specs:
+    dropbox (1.3.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-flux
+  specs:
+    flux (1.0.1)
 
 GITHUBTARBALL
   remote: boxen/puppet-foreman
@@ -24,11 +44,6 @@ GITHUBTARBALL
     git (2.5.0)
 
 GITHUBTARBALL
-  remote: boxen/puppet-go
-  specs:
-    go (1.1.0)
-
-GITHUBTARBALL
   remote: boxen/puppet-homebrew
   specs:
     homebrew (1.9.4)
@@ -39,9 +54,19 @@ GITHUBTARBALL
     hub (1.3.0)
 
 GITHUBTARBALL
-  remote: boxen/puppet-nginx
+  remote: boxen/puppet-imageoptim
   specs:
-    nginx (1.4.3)
+    imageoptim (0.0.2)
+
+GITHUBTARBALL
+  remote: boxen/puppet-mongodb
+  specs:
+    mongodb (2.6.1)
+
+GITHUBTARBALL
+  remote: boxen/puppet-mplayerx
+  specs:
+    mplayerx (1.0.2)
 
 GITHUBTARBALL
   remote: boxen/puppet-nodejs
@@ -52,6 +77,11 @@ GITHUBTARBALL
   remote: boxen/puppet-openssl
   specs:
     openssl (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-osx
+  specs:
+    osx (2.7.1)
 
 GITHUBTARBALL
   remote: boxen/puppet-phantomjs
@@ -69,9 +99,14 @@ GITHUBTARBALL
     repository (2.3.0)
 
 GITHUBTARBALL
-  remote: boxen/puppet-ruby
+  remote: boxen/puppet-spotify
   specs:
-    ruby (8.1.2)
+    spotify (1.0.2)
+
+GITHUBTARBALL
+  remote: boxen/puppet-sublime_text
+  specs:
+    sublime_text (1.0.1)
 
 GITHUBTARBALL
   remote: boxen/puppet-sudo
@@ -79,9 +114,24 @@ GITHUBTARBALL
     sudo (1.0.0)
 
 GITHUBTARBALL
-  remote: boxen/puppet-xquartz
+  remote: boxen/puppet-wget
   specs:
-    xquartz (1.1.1)
+    wget (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-zsh
+  specs:
+    zsh (1.0.0)
+
+GITHUBTARBALL
+  remote: erivello/puppet-ohmyzsh
+  specs:
+    ohmyzsh (1.0.0)
+
+GITHUBTARBALL
+  remote: pagrawl3/puppet-alfred
+  specs:
+    alfred (1.3.1)
 
 GITHUBTARBALL
   remote: puppetlabs/puppetlabs-inifile
@@ -98,25 +148,41 @@ GITHUBTARBALL
   specs:
     module_data (0.0.3)
 
+GITHUBTARBALL
+  remote: yuanying/puppet-totalterminal
+  specs:
+    totalterminal (1.4.6)
+
 DEPENDENCIES
+  alfred (= 1.3.1)
+  bartender (= 1.0.0)
   boxen (= 3.6.2)
-  dnsmasq (= 1.0.1)
+  chrome (= 1.1.1)
+  cinch (= 1.0.1)
+  dropbox (= 1.3.0)
+  flux (= 1.0.1)
   foreman (= 1.2.0)
   gcc (= 2.1.1)
   git (= 2.5.0)
-  go (= 1.1.0)
   homebrew (= 1.9.4)
   hub (= 1.3.0)
+  imageoptim (= 0.0.2)
   inifile (= 1.1.1)
   module_data (= 0.0.3)
-  nginx (= 1.4.3)
+  mongodb (= 2.6.1)
+  mplayerx (= 1.0.2)
   nodejs (= 3.8.1)
+  ohmyzsh (= 1.0.0)
   openssl (= 1.0.0)
+  osx (= 2.7.1)
   phantomjs (= 2.3.0)
   pkgconfig (= 1.0.0)
   repository (= 2.3.0)
-  ruby (= 8.1.2)
+  spotify (= 1.0.2)
   stdlib (= 4.2.1)
+  sublime_text (= 1.0.1)
   sudo (= 1.0.0)
-  xquartz (= 1.1.1)
+  totalterminal (= 1.4.6)
+  wget (= 1.0.0)
+  zsh (= 1.0.0)
 

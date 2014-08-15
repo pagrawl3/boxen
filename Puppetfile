@@ -54,7 +54,8 @@ github "sudo",        "1.0.0"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
-github "alfred",          "1.3.0"
+github "osx",             "2.7.1"
+github "alfred",          "1.3.1", :repo => "pagrawl3/puppet-alfred"
 github "bartender",       "1.0.0"
 github "spotify",         "1.0.2"
 github "dropbox",         "1.3.0"
@@ -66,5 +67,6 @@ github "imageoptim",      "0.0.2"
 github "sublime_text",    "1.0.1"
 github "chrome",          "1.1.1"
 github "wget",            "1.0.0"
-github "prezto",          "1.0.1", :repo => "archfear/puppet-prezto"
-github "totalterminal",   "1.0.0", :repo => "phatblat/puppet-totalterminal"
+github "zsh",	            "1.0.0"
+github "totalterminal",   "1.4.6", :repo => "yuanying/puppet-totalterminal"
+github "ohmyzsh",         "1.0.0", :repo => "erivello/puppet-ohmyzsh"
