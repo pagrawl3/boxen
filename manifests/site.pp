@@ -86,16 +86,16 @@ node default {
   sublime_text::v2::package { 'Emmet':
     source => 'sergeche/emmet-sublime'
   }
-  sublime_text_2::package { 'Jade':
+  sublime_text_2::v2::package { 'Jade':
       source => 'miksago/jade-tmbundle'
   }
-  sublime_text_2::package { 'SublimeAllAutocomplete':
+  sublime_text_2::v2::package { 'SublimeAllAutocomplete':
     source => 'alienhard/SublimeAllAutocomplete'
   }
-  sublime_text_2::package { 'LESS':
+  sublime_text_2::v2::package { 'LESS':
     source => 'danro/Less-sublime'
   }
-  sublime_text_2::package { 'Color Scheme - Solarized':
+  sublime_text_2::v2::package { 'Color Scheme - Solarized':
     source => 'altercation/solarized'
   }
   file { "${boxen::config::homedir}/bin/subl":
