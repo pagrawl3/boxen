@@ -86,10 +86,13 @@ node default {
   # include nodejs::v0_6
   # include nodejs::v0_8
   include nodejs::v0_10
+  class { 'nodejs::global': version => 'v0.10.29' }
+
   include alfred
   include bartender
   include spotify
   include dropbox
+  include adobe_creative_cloud
   include mongodb
   include flux
   include mplayerx
